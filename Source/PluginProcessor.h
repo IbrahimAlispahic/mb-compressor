@@ -11,8 +11,8 @@
 /*
  DSP Roadmap
  1) Figure how to split the audio into 3 bands DONE
- 2) Create parameters to control where this split happens
- 3) Prove that splitting into 3 bands produces no audiable artefacts
+ 2) Create parameters to control where this split happens DONE
+ 3) Prove that splitting into 3 bands produces no audiable artefacts DONE
  4) Create audio parameters for 3 compressor bands, these need to live
     in each band instance
  5) Add 2 remaining compressors
@@ -160,8 +160,10 @@ public:
         createParameterLayout() };
 
 private:
-        
-    CompressorBand compressor;
+    std::array<CompressorBand, 3> compressors;
+    CompressorBand& lowBandComp = compressors[0];
+    CompressorBand& midBandComp = compressors[1];
+    CompressorBand& highBandComp = compressors[2];
     
     using Filter = juce::dsp::LinkwitzRileyFilter<float>;
 //          fc0     fc1
