@@ -18,7 +18,25 @@
  5) Add 2 remaining compressors DONE
  6) Mute, solo, bypass individual compressors DONE
  7) Add input and output gain to offset changes in output level DONE
- 8) Cleanup
+ 8) Cleanup DONE
+ */
+
+/*
+ GUI Roadmap
+ 1) Global Controls (x-over sliders, gain sliders)
+ 2) Main Band Controls (attack, release, threshold ratio)
+ 3) Add solo/mute/bypass buttons
+ 4) Band Select Functionality
+ 5) Band select buttons reflect the solo/mute/bypass state
+ 6) Custom look and feel for Sliders and toggle buttons
+ 7) Spectrum analyzer overview
+ 8) Data Structures for Spectrum Analyzer
+ 9) Fifo usage in pluginProcessor::processBlock
+ 10) impplementation of the analyzer rendering pre-computed paths
+ 11) Drawing corossowers on top of the Analyzer Plot
+ 12) Drawing gain reduction on top of the analyzer
+ 13) Analyzer bypass
+ 14) Global Bypass button
  */
 
 #include <JuceHeader.h>
